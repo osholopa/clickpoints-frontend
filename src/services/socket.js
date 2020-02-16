@@ -1,6 +1,6 @@
 import socketIOClient from "socket.io-client"
 
-const url = "http://localhost:3001/"
+const url = "/"
 
 const socket = socketIOClient(url)
 
