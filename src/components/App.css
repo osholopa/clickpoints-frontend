@@ -2,9 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
+.App-button {
   height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
