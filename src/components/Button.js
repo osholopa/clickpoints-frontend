@@ -17,7 +17,7 @@ const Button = props => {
     props.points > 0
       ? props.setPoints(props.points - 1)
       : alert("Cannot click, you are out of points.")
-    
+
   }
 
   return (

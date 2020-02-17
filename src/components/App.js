@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Button from "./Button"
 import "./App.css"
 import Message from "./Message"
@@ -18,13 +18,29 @@ const App = () => {
     opacity: 100
   }
 
+  useEffect(() => {
+    setPoints(parseInt(localStorage.getItem("points")))
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("points", points)
+  }, [points])
+
   return (
     <div className="App">
       <header className="App-header">
         <div>
           {showWinMsg ? (
-            <Message style={opaque} content={`You won ${winPoints} points!`}></Message>
-          ) : <Message style={transparent} content={`You won ${winPoints} points!`}></Message>}
+            <Message
+              style={opaque}
+              content={`You won ${winPoints} points!`}
+            ></Message>
+          ) : (
+            <Message
+              style={transparent}
+              content={`You won ${winPoints} points!`}
+            ></Message>
+          )}
         </div>
         <p>Press the button !</p>
         <p>Your points: {points}</p>
