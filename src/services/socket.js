@@ -4,24 +4,22 @@ const url = "/"
 
 const socket = socketIOClient(url)
 
+const getNextWin = setNextWin => {
+  
+  socket.emit("getNextWin")
+
+  socket.on("nextWin", data => {
+    setNextWin(data.nextWin)
+  })
+}
+
 const click = (props, playAudio) => {
-  const {
-    setShowWinMsg,
-    setWinPoints,
-    points,
-    setPoints,
-    setNextWin,
-    setShowNextWin
-  } = props
+  const { setShowWinMsg, setWinPoints, points, setPoints, setNextWin } = props
 
   socket.emit("click")
 
   socket.on("nextWin", data => {
     setNextWin(data.nextWin)
-    setShowNextWin(true)
-    setTimeout(() => {
-      setShowNextWin(false)
-    }, 1000)
   })
 
   socket.on("win", data => {
@@ -36,4 +34,4 @@ const click = (props, playAudio) => {
   })
 }
 
-export default { click }
+export default { click, getNextWin }
