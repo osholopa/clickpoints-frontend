@@ -7,7 +7,8 @@ This the front-end of a simple multiplayer button click game made with [React](h
  2. Follow [these](https://github.com/osholopa/clickpoints-backend) instructions to set up and run the back-end.
  3. Open Git Bash/Terminal in the same directory where cloned the back-end.
  4. Clone this repository by typing `git clone https://github.com/osholopa/clickpoints-frontend.git` into the console. Run the command by pressing Enter. Insert your Github credentials if required.
- 5. Install project dependencies with the command `npm install`.
- 6. Run the command `npm start`.
- 7. A local server should start up and you should be able to access the application with the address
+ 5. Move to the created folder by typing `cd clickpoints-frontend`.
+ 6. Install project dependencies with the command `npm install`.
+ 7. Run the command `npm start`.
+ 8. A local server should start up and you should be able to access the application with the address
  `http://localhost:3000/`. Any changes you make to the code should be visible instantly on the browser.
