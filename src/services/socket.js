@@ -5,7 +5,6 @@ const url = "/"
 const socket = socketIOClient(url)
 
 const getNextWin = setNextWin => {
-  
   socket.emit("getNextWin")
 
   socket.on("nextWin", data => {
@@ -24,7 +23,6 @@ const click = (props, playAudio) => {
 
   socket.on("win", data => {
     playAudio()
-    console.log(`You won ${data.points} points!`)
     setPoints(points - 1 + data.points)
     setWinPoints(data.points)
     setShowWinMsg(true)

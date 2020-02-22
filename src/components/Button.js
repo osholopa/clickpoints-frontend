@@ -17,9 +17,12 @@ const Button = props => {
   }
 
   const handleButtonClick = () => {
-    socket.click(props, playAudio)
-
-    props.points > 0 ? props.setPoints(props.points - 1) : restartGame()
+    if (props.points > 0) {
+      socket.click(props, playAudio)
+      props.setPoints(props.points - 1)
+    } else {
+      restartGame()
+    }
   }
 
   return (

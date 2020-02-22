@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #283840;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -11,30 +11,10 @@
 }
 
 .App-button {
-  height: 40vmin;
+  height: 35vmin;
   touch-action: manipulation;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
   text-align: center;
-  background-color: #282c34;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
