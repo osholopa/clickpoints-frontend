@@ -1,4 +1,7 @@
 # Clickpoints Front-end
+
+The app is hosted publicly in [https://cryptic-mountain-25746.herokuapp.com/](https://cryptic-mountain-25746.herokuapp.com/)
+
 This the front-end of a simple multiplayer button click game made with [React](https://reactjs.org/). The back-end of this project is in a separate repository and is needed to run the app locally. Follow [this documentation](https://github.com/osholopa/clickpoints-backend) to set up the back-end
 
 ## Installation
